@@ -11,7 +11,7 @@ public class Playfield : MonoBehaviour
     public static Vector2 roundVec2(Vector2 v)
     {
         return new Vector2(Mathf.Round(v.x),
-                           Mathf.round(v.y));
+                           Mathf.Round(v.y));
     }
     public static bool insideBorder(Vector2 pos)
     {
