@@ -85,17 +85,17 @@ public class Group : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             //Change pos
-            transform.position += new Vector3(0, 0, -90);
+            transform.Rotate(0, 0, -90);
 
             // is it valid?
             if (isValidGridPos())
                 updateGrid();
             else
                 //Revertion
-                transform.position += new Vector3(0, 0, 90);
+                transform.Rotate(0, 0, 90);
         }
 
-        if (Input.GetKeyDown(KeyCode.UpArrow) || Time.time - lastFall >= 1)
+        if (Input.GetKeyDown(KeyCode.DownArrow) || Time.time - lastFall >= 1)
         {
             //Change pos
             transform.position += new Vector3(0, -1, 0);
