@@ -47,6 +47,9 @@ public class Group : MonoBehaviour
         }
     }
 
+    // Time since last gravity tick
+    float lastFall = 0;
+
     // Update is called once per frame
     void Update()
     {
@@ -91,9 +94,6 @@ public class Group : MonoBehaviour
                 //Revertion
                 transform.position += new Vector3(0, 0, 90);
         }
-
-        // For time since last fall
-        float lastFall = 0;
 
         if (Input.GetKeyDown(KeyCode.UpArrow) || Time.time - lastFall >= 1)
         {
